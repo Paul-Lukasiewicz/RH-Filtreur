@@ -15,14 +15,6 @@ load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=openai_api_key)
 
-airtable_api_key = os.getenv("AIRTABLE_API_KEY")
-
-BDD_airtable = airtable.Airtable('app22t9PEOCrWVRqh', airtable_api_key)
-
-table_candidat = BDD_airtable.get("tbl4Ftlwz7HYkpqnu")
-table_campagne = BDD_airtable.get("tblJ3I9jgvfJNWgB6")
-
-print(table_campagne['records'][0]["fields"]["Candidats"])
 
 
 class CVFit(BaseModel):
