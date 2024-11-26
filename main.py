@@ -92,5 +92,5 @@ def test():
     data = request.get_json()
     return jsonify({'message': 'Test successful', 'data': data})
 
-#if __name__ == '__main__':
-    #app.run(debug=True, port=5000)
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
