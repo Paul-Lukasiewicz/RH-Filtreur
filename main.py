@@ -76,7 +76,7 @@ def analyse():
             return jsonify({'error': 'Analysis failed'}), 500
             
         return jsonify({
-            'score': float(result.score)*100,
+            'score': result.score,
             'justification': result.justify
         })
         
